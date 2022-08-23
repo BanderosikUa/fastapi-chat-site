@@ -134,3 +134,8 @@ dmypy.json
 # Project
 
 .gitignore
+
+# alembic
+
+alembic.ini
+alembic
