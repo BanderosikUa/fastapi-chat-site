@@ -139,3 +139,5 @@ dmypy.json
 
 alembic.ini
 alembic
+
+static

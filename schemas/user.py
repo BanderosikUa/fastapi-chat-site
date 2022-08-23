@@ -6,6 +6,7 @@ class UserBase(BaseModel):
     is_active: bool | None = True
     is_superuser: bool | None = False
     full_name: str | None = None
+    offline: bool = False
 
 
 class UserCreate(UserBase):

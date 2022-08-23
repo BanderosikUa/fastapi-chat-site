@@ -6,12 +6,12 @@ from core.settings import DB_NAME, DB_USER_PASSWORD, DB_USER_USERNAME
 
 engine = create_engine(
     "mariadb+mariadbconnector:"
-    f"//{DB_USER_USERNAME}:{DB_USER_PASSWORD}@127.0.0.1:3306/{DB_NAME}"
+    f"//{DB_USER_USERNAME}:{DB_USER_PASSWORD}@127.0.0.1:3306/{DB_NAME}",
+    echo=True
    )
 
-Session = sessionmaker(bind=engine)
-
-Base = declarative_base()
+Session = sessionmaker(bind=engine, autocommit=False,
+                       autoflush=False)
 
 
 class DbContext:
